@@ -1,10 +1,13 @@
 {
   "name": "my-react-js-app",
   "version": "0.0.0",
+  "homepage": "https://dharavatunaveen.github.io/react-ui-components-poc",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -13,6 +16,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react-refresh": "^1.3.1",
+    "gh-pages": "^6.3.0",
     "vite": "^2.5.1"
   }
 }
