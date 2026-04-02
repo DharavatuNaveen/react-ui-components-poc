@@ -1,0 +1,108 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.home-hero-section {
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.home-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: var(--glow-color, rgba(139, 92, 246, 0.15));
+  filter: blur(120px);
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.home-hero-section h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.home-hero-section p {
+  color: var(--text-secondary, #94a3b8);
+  font-size: 1.25rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.home-components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+}
+
+.home-card {
+  background: var(--card-bg, rgba(30, 41, 59, 0.6));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 20px;
+  padding: 36px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(139, 92, 246, 0.15);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.home-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  color: #e2e8f0;
+}
+
+.home-component-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.home-component-group.vertical {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.home-component-group.centered {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loading-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-card h2 {
+  margin-bottom: 0px;
+}
+
+.loading-card .home-component-group {
+  flex: 1;
+  min-height: 150px;
+}
